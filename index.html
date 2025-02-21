@@ -1,39 +1,376 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu Bản Thân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Xin chào! Tôi là [Tên của bạn]</h1>
-        <img src="avatar.jpg" alt="Ảnh đại diện">
-        <p><strong>Giới thiệu:</strong> Tôi là một lập trình viên yêu thích công nghệ và sáng tạo.</p>
-        <p><strong>Kỹ năng:</strong> HTML, CSS, JavaScript, Java, Spring Boot, ReactJS.</p>
-        <p><strong>Liên hệ:</strong> <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name">Nguyễn Nhật Trường</h1>
+          <p style="color: aliceblue; text-align: center;">Backend development</p>
+          <a href="./assets/cv.pdf" target="_blank" class="title" style="margin-top: 15px;">Xem CV</a>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:nhattruong16062003@gmail.com" class="contact-link">nhattruong16062003@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+84 869865163" class="contact-link">+84 869865163</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2003-06-16">June 16, 2003</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>TP.Hồ Chí Minh</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://web.facebook.com/nguyennhattruong1606" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/nhattruong16062003" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Giới thiệu bản thân</h2>
+        </header>
+
+        <section class="about-text">
+          Xin chào! Tôi là sinh viên năm 4 tại Trường Đại học Sài Gòn, đam mê lập trình backend và phát triển web.
+          Hiện tại, tôi tập trung vào xây dựng website bằng Laravel, tìm hiểu về kiến trúc phần mềm và tối ưu hiệu suất
+          backend.
+          Dù chưa có kinh nghiệm làm việc tại công ty, tôi đã tự học và thực hành qua nhiều dự án cá nhân, rèn luyện kỹ
+          năng về RESTful API, MySQL, Docker, Authentication, Authorization,...
+          Tôi luôn sẵn sàng học hỏi và trau dồi thêm kinh nghiệm thực tế để phát triển sự nghiệp trong lĩnh vực lập
+          trình. 🚀
+          Nếu bạn cần một người nhiệt huyết và ham học hỏi, đừng ngần ngại kết nối với tôi!😊
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Công việc của tôi</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  Thiết kế giao diện web hiện đại, thân thiện với người dùng bằng ngôn ngữ Reactjs.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  Xây dựng backend cho trang web với RESTful Api và các tính năng bảo mật
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Freelancer</h4>
+
+                <p class="service-item-text">
+                  Làm công việc tự do theo yêu cầu từ khách hàng trong thời gian rảnh
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  Chụp ảnh nghệ thuật, chỉnh sửa ảnh theo yêu cầu từ khách hàng
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <div data-overlay></div>
+        <button data-modal-close-btn></button>
+
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Trường Tiểu Học Bình Đông</h4>
+
+              <span>2010-2014</span>
+              <p class="timeline-text">
+                Tham gia dự thi học sinh giỏi cấp huyện
+              </p>
+              <p class="timeline-text">
+                Học sinh giỏi 5 năm liền
+              </p>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Trường Trung Học Cơ Sở Bình Đông</h4>
+
+              <span>2014-2017</span>
+
+              <p class="timeline-text">
+                Đạt học sinh giỏi cấp huyện toán lớp 8
+              </p>
+              <p class="timeline-text">
+                Đạt học sinh giỏi cấp huyện Hóa lớp 8,9
+              </p>
+              <p class="timeline-text">
+                Học sinh giỏi 4 năm liền
+              </p>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Trường trung học phổ thông Trần Kỳ Phong</h4>
+
+              <span>2018-2021</span>
+
+              <p class="timeline-text">
+                Tham gia dự thi cấp tỉnh môn Tin
+              </p>
+              <p class="timeline-text">
+                Học sinh khá lớp 10
+              </p>
+              <p class="timeline-text">
+                Học sinh giỏi lớp 11,12
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Trường trung học phổ thông Trần Kỳ Phong</h4>
+
+              <span>2021 - nay</span>
+
+              <p class="timeline-text">
+                Nhận học bổng kì 1 năm nhất
+                GPA > 7.0
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+      <button data-select>
+      </button>
+
     </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
